@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* min-height: 729px; */
+             background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        }
+        .card{
+            width: 400px;
+            height: 550px;
+            border-radius: 14px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+
+            
+        }
+        .textbox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 90%;
+            text-align: center;
+        }
+        .card img{
+               width: 100%;
+              height: 30%; 
+              border-top-left-radius: 15px;
+              border-top-right-radius:15px ;
+        }
+        .card h2{
+            font-size: 1.5rem;
+        }
+        #amountbox{
+            width: 80%;
+            height: 10%;
+            background-color:#8BC6EC;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        #leftbox{
+            width: fit-content;
+            display: flex;
+            gap: 15px;
+            height: 100%;
+            align-items: center;
+
+
+        }
+        .rightbox a{
+            text-decoration: none;
+        }
+      
+        .imgbox img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;   /* circle shape banayega */
+            object-fit: cover; 
+
+        }
+        #payment{
+            width: 80%;
+            height: 9%;
+            background-color: rgb(22, 22, 79);
+            color: white;
+            border-radius: 10px;
+            box-shadow:0px 10px 20px rgba(0, 0, 0, 0.19) 0px 6px 6px rgba(0,0,0,0.23);
+        }
+        .Cancelbox a{
+            text-decoration: none;
+            color: rgb(46,43,43);
+            font-weight: bold;
+            font-size: large;
+
+        }
+        @media (max-width:600px){
+                #amountbox{
+                    flex-direction: column;
+                   height: auto;   /* height ko auto karna better hai */
+                   gap: 10px;      /* thoda spacing de diya */
+                  padding: 15px;
+    }
+
+                #leftbox{
+                 justify-content: center; /* center me align */
+    }
+
+                .rightbox{
+                      text-align: center; /* link center me */
+                      width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+        <img src="https://d6xcmfyh68wv8.cloudfront.net/newsroom-content/uploads/2021/07/New-Project-18.jpg"  alt="card">
+       <div class="textbox">
+         <h2>Order Summary</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consequatur voluptatum iure, quaerat blanditiis voluptates accusamus quasi magnam quidem. Non?</p>
+       </div>
+
+       <div id="amountbox">
+        <div id="leftbox">
+            <div class="imgbox">
+                <img src="https://w7.pngwing.com/pngs/728/895/png-transparent-itunes-store-ipod-shuffle-apple-music-purple-text-number-thumbnail.png" alt="music">
+               
+            </div>
+            <div id="text">
+                <p>Amount</p>
+                <p>$99.9/year</p>
+
+            </div>
+
+        </div>
+        <div class="rightbox">
+            <a href="#">Change</a>
+        </div>
+
+       </div>
+
+       <button id="payment">
+         Proceed to Pay
+
+       </button>
+       <div class="Cancelbox">
+        <a href="#">Cancel Order</a>
+       </div>
+       
+        
+
+
+    </div>
+</body>
+</html>
